@@ -18,7 +18,7 @@ function login($uname,$pass,$conn){
 			if(mysqli_num_rows($results) == 1){
         session_start();
           $_SESSION['username'] = $uname;
-          echo $_SESSION['username'];
+          // echo $_SESSION['username'];
 				 header('location:../users.php');
 				}
 		else{
