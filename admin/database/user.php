@@ -18,6 +18,8 @@ function login($uname,$pass,$conn){
 			if(mysqli_num_rows($results) == 1){
         session_start();
           $_SESSION['username'] = $uname;
+          $_SESSION["user_id"]=$row["user_id"];
+          $_SESSION["user_role"]=$row["role"];
           // echo $_SESSION['username'];
 				 header('location:../users.php');
 				}
