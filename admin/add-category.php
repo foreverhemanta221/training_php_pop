@@ -7,7 +7,8 @@
               </div>
               <div class="col-md-offset-3 col-md-6">
                   <!-- Form Start -->
-                  <form action="" method="POST" autocomplete="off">
+
+                  <form action="/training/admin/users_add/category_add.php" method="POST" autocomplete="off">
                       <div class="form-group">
                           <label>Category Name</label>
                           <input type="text" name="cat" class="form-control" placeholder="Category Name" required>

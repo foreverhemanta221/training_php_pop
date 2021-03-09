@@ -7,7 +7,7 @@
               </div>
               <div class="col-md-offset-3 col-md-6">
                   <!-- Form Start -->
-                  <form  action="" method ="POST" autocomplete="off">
+                  <form  action="/training/admin/users_add/users_add.php" method ="POST" autocomplete="off">
                       <div class="form-group">
                           <label>First Name</label>
                           <input type="text" name="fname" class="form-control" placeholder="First Name" required>

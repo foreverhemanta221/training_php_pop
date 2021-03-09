@@ -18,7 +18,7 @@
                         <img class="logo" src="images/news.jpg">
                         <h3 class="heading">Admin</h3>
                         <!-- Form Start -->
-                        <form  action="/blog/admin/auth/register.php" method ="POST">
+                        <form  action="/training/admin/auth/register.php" method ="POST">
                             <div class="form-group">
                                     <label>First Name</label>
                                     <input type="text" name="firstname" class="form-control" placeholder="">
