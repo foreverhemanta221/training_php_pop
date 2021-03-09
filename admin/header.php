@@ -1,3 +1,7 @@
+<?php
+require __DIR__ ."../database/db.php";
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -27,7 +31,7 @@
                     <!-- /LOGO -->
                       <!-- LOGO-Out -->
                     <div class="col-md-offset-9  col-md-1">
-                        <a href="logout.php" class="admin-logout" >logout</a>
+                        <a href="logout.php" class="admin-logout" >Hello <br><?php echo $_SESSION['username']; ?><br>logout</a>
                     </div>
                     <!-- /LOGO-Out -->
                 </div>

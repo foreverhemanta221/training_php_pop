@@ -12,7 +12,7 @@ if(isset($_POST['register'])){
        echo "first name is required";
        die();
    }
-   insert($fname,$lname,$username,$password,$role,$conn);
+   update($fname,$lname,$username,$password,$role,$conn);
 }else{
     header('location:/training/admin/index.php');
 }
