@@ -15,14 +15,16 @@ function login($uname,$pass,$conn){
   $sql = "select * from user where username='$uname' && password='$pass'";
 			$results = mysqli_query($conn, $sql);
 
-			if(mysqli_num_rows($results) == 1){
+			if(mysqli_num_rows($results)>0){
+        while($row=mysqli_fetch_assoc($results)){
         session_start();
           $_SESSION['username'] = $uname;
           $_SESSION["user_id"]=$row["user_id"];
+          echo $_SESSION["user_id"];
           $_SESSION["user_role"]=$row["role"];
           // echo $_SESSION['username'];
 				 header('location:../users.php');
-				}
+				}}
 		else{
 			echo "<script>alert('Incorrect Password.Please try again')</script>";
 		
