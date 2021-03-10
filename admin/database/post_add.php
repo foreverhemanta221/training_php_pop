@@ -37,5 +37,22 @@ if($result){
 }
 }
 
+function selectUser($id,$conn){
+  $sql = "select * from post where post_id=$id";
+  
+  $result=mysqli_query($conn,$sql) or die("Query failed".mysqli_error($conn));
+ 
+  $row =mysqli_fetch_assoc($result);
+ return $row;
+}
+
+function update_post($post_id,$post_title,$postdesc,$category,$old_image,$conn){
+  $sql="update post set post_id='$post_id',title='$post_title',description='$postdesc',category='$category',post_img='$old_image' where post_id=$post_id";
+    $result=mysqli_query($conn,$sql);
+   if($result){
+    header('location:/training/admin/post.php');
+   }
+}
+
 
 ?>
